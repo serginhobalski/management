@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static 'core/img/favicon.ico'%}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'core/lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'core/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'core/lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'core/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{% static 'core/css/style.css' %}" rel="stylesheet">
+</head>
+
+<body class="bg-white">
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper full-page-wrapper">
+            <div class="content-wrapper d-flex align-items-center auth px-0">
+                <div class="row w-100 mx-0">
+                    <div class="col-lg-4 mx-auto">
+                        <div class="auth-form-light text-center py-5 px-4 px-sm-5">
+                            <h4>Olá! Vamos começar...</h4>
+                            <h6 class="font-weight-light text-warning">Faça login para continuar.</h6>
+                            <form method="post" class="pt-3">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                               <button class="btn btn-danger" type="submit" >Login</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content-wrapper ends -->
+        </div>
+        <!-- page-body-wrapper ends -->        
+    </div>
+
+            <!-- Footer Start -->
+            <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
+                <div class="container py-5 px-lg-5">
+                    <div class="row g-5">
+                        <div class="col-md-6 col-lg-3">
+                            <p class="section-title text-white h5 mb-4">Endereço<span></span></p>
+                            <p><i class="fa fa-map-marker-alt me-3"></i>Trav. Humaitá, 942, Ap 803, Pedreira, Belém-PA</p>
+                            <p><i class="fa fa-phone-alt me-3"></i>(91) 99188-2198</p>
+                            <p><i class="fa fa-envelope me-3"></i>contato@estimulardigital.com</p>
+                            <div class="d-flex pt-2">
+                                <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <p class="section-title text-white h5 mb-4">Atalhos<span></span></p>
+                            <a class="btn btn-link" href="">Sobre nós</a>
+                            <a class="btn btn-link" href="">Contato</a>
+                            <a class="btn btn-link" href="">Privacy Policy</a>
+                            <a class="btn btn-link" href="">Cursos</a>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <p class="section-title text-white h5 mb-4">Galeria<span></span></p>
+                            <div class="row g-2">
+                                <div class="col-4">
+                                    <img class="img-fluid" src="{% static 'core/img/portfolio-1.jpg'%}" alt="Image">
+                                </div>
+                                <div class="col-4">
+                                    <img class="img-fluid" src="{% static 'core/img/portfolio-2.jpg'%}" alt="Image">
+                                </div>
+                                <div class="col-4">
+                                    <img class="img-fluid" src="{% static 'core/img/portfolio-3.jpg'%}" alt="Image">
+                                </div>
+                                <div class="col-4">
+                                    <img class="img-fluid" src="{% static 'core/img/portfolio-4.jpg'%}" alt="Image">
+                                </div>
+                                <div class="col-4">
+                                    <img class="img-fluid" src="{% static 'core/img/portfolio-5.jpg'%}" alt="Image">
+                                </div>
+                                <div class="col-4">
+                                    <img class="img-fluid" src="{% static 'core/img/portfolio-6.jpg'%}" alt="Image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
+                            <p>Fique por dentro de todas as novidades mais importantes!</p>
+                            <div class="position-relative w-100 mt-3">
+                                <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
+                                    placeholder="Seu E-mail" style="height: 48px;">
+                                <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
+                                        class="fa fa-paper-plane text-primary fs-4"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container px-lg-5">
+                    <div class="copyright">
+                        <div class="row">
+                            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                                &copy; <a class="border-bottom" href="#">EDigital</a>.                            
+                                Desevolvido por <a class="border-bottom" href="#">Sergio Obalski Filho</a> Distribuído por <a class="border-bottom" href="#" target="_blank">Estimular Digital</a>
+                            </div>
+                            <div class="col-md-6 text-center text-md-end">
+                                <div class="footer-menu">
+                                    <a href="/">Home</a>
+                                    <a href="#">Cookies</a>
+                                    <a href="#">Help</a>
+                                    <a href="#">FQAs</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'core/lib/wow/wow.min.js'%}"></script>
+    <script src="{% static 'core/lib/easing/easing.min.js'%}"></script>
+    <script src="{% static 'core/lib/waypoints/waypoints.min.js'%}"></script>
+    <script src="{% static 'core/lib/counterup/counterup.min.js'%}"></script>
+    <script src="{% static 'core/lib/owlcarousel/owl.carousel.min.js'%}"></script>
+    <script src="{% static 'core/lib/isotope/isotope.pkgd.min.js'%}"></script>
+    <script src="{% static 'core/lib/lightbox/js/lightbox.min.js'%}"></script>
+    <!-- Template Javascript -->
+    <script src="{% static 'core/js/main.js'%}"></script>
+    <!-- endinject -->
+</body>
+
+</html>
