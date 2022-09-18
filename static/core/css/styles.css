@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #6222CC;
+    --primary: #000029c5;
     --secondary: #FBA504;
     --light: #F6F4F9;
     --dark: #04000B;
@@ -152,7 +152,7 @@ h6,
     }
 
     .navbar-light .navbar-brand h1 {
-        color: var(--primary);
+        color: var(--dark);
     }
 
     .navbar-light .navbar-brand img {
